@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem 1rem 4.5rem;
+  background-color: var(--app-background);
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+
+  height: 3rem;
+  background-color: var(--app-background);
+
+  pointer-events: none;
+
+  position: sticky;
+  top: 0;
+}
+
+.container > div > strong {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-color);
+}
+
+.container > div > strong > span {
+  color: var(--accent-color);
+}

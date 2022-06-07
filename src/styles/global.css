@@ -1,14 +1,32 @@
 :root {
-  --app-background: #ffffff;
+  --app-background: hsl(206, 30.0%, 98.8%);
+  --app-subtle-background: hsl(210, 16.7%, 97.6%);
 
-  --text-hi-contrast: #121216;
+  --element-background-color: hsl(209, 13.3%, 95.3%);
+
+  --text-lo-contrast: hsl(206, 6.0%, 43.5%);
+  --text-hi-contrast: hsl(206, 24.0%, 9.0%);
+
+  --brand-color: hsl(206, 100%, 50.0%);
+  --brand-hover-color: hsl(208, 100%, 47.3%);
+
+  --accent-color: hsl(272, 51.0%, 54.0%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --app-background: #121216;
+    --app-background: hsl(200, 7.0%, 8.8%);
+    --app-subtle-background: hsl(195, 7.1%, 11.0%);
 
-    --text-hi-contrast: #ffffff;
+    --element-background-color: hsl(197, 6.8%, 13.6%);
+
+    --text-lo-contrast: hsl(206, 6.0%, 63.0%);
+    --text-hi-contrast: hsl(210, 6.0%, 93.0%);
+
+    --brand-color: hsl(206, 100%, 50.0%);
+    --brand-hover-color: hsl(209, 100%, 60.6%);
+
+    --accent-color: hsl(272, 51.0%, 54.0%);
   }
 }
 
@@ -24,11 +42,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
+  background: var(--element-background-color);
   border-radius: 8px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-hover-color);
+}
+
 body {
-  background-color: var(--app-background);
+  background-color: var(--app-subtle-background);
   color: var(--text-hi-contrast);
   -webkit-font-smoothing: antialiased;
 }
