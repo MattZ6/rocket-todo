@@ -1,0 +1,40 @@
+:root {
+  --app-background: #ffffff;
+
+  --text-hi-contrast: #121216;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: #121216;
+
+    --text-hi-contrast: #ffffff;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+}
+
+body {
+  background-color: var(--app-background);
+  color: var(--text-hi-contrast);
+  -webkit-font-smoothing: antialiased;
+}
+
+body, button, input, textarea {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
