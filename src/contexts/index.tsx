@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { TasksProvider } from './Task';
+import { TasksProvider } from './Tasks';
 
 type Props = {
   children: ReactNode;

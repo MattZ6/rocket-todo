@@ -2,37 +2,38 @@ import { ChangeEvent, FormEvent, useCallback, useMemo, useState } from 'react';
 import { PlusCircle } from 'phosphor-react';
 
 import styles from './styles.module.css';
-
-type Props = {
-  onSubmit: (content: string) => void;
-}
+import { useTasks } from '../../hooks';
 
 const PLACEHOLDER_OPTIONS = [
-  'Make a cup of coffe... ☕',
-  'I should put some placeholder here, right?',
+  '🎸 Listen to "Rock of Ages" by Def Leppard',
+  'Make a cup of coffee... ☕',
+  'I should put some useful placeholder here...',
   'Create a site with Vite... ⚡',
   'Buy a bike... 🚲',
-  'Invite Mayk Brito to a chat...',
-  'Create a chat app...',
+  'Sending Mayk a hug...',
+  'Create a to-do list app...',
   'Buy carrots... 🥕',
-  '🤩 Star this project on GitHub',
-  'Make mooore cofee ☕☕',
-  'Go fishing 🎣',
+  'Star this project on GitHub... ⭐',
+  'Make more coffee... ☕',
+  'Go fishing... 🎣',
   'Listen to Brad Paisley on Spotify 🎼',
   'Help other devs on Discord... 👩‍💻',
   'Check that the coffee jug is empty...',
   'Going out for a run... 🏃‍♀️',
-  'Watch Bojack Horseman on Netflix 📺'
+  'Watch Bojack Horseman on Netflix... 📺',
+  'Host the project on Netlify...'
 ];
 
-export function Form({ onSubmit }: Props) {
+export function Form() {
+  const { addTask } = useTasks();
+
   const [content, setContent] = useState('');
   const [inputPlaceholder, setInputPlaceholder] = useState(() => PLACEHOLDER_OPTIONS[Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)])
 
   const handleSubmit = useCallback((event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    onSubmit(content);
+    addTask({ content })
 
     setInputPlaceholder(PLACEHOLDER_OPTIONS[Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)])
 
@@ -48,14 +49,14 @@ export function Form({ onSubmit }: Props) {
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
       <input
-        name="todo"
+        name="task"
         type="text"
         placeholder={inputPlaceholder}
         value={content}
         onChange={handleTextChanged}
       />
       <button type="submit" disabled={!isInputFilled}>
-        Add
+        <span>Add</span>
         <PlusCircle size={24} weight="bold" />
       </button>
     </form>

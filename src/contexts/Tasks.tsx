@@ -1,4 +1,8 @@
-import { createContext, ReactNode, useCallback, useState } from 'react';
+import { createContext, ReactNode, useCallback, useEffect, useState } from 'react';
+
+import { LocalStorage } from '../utils/storage';
+
+const TASKS_KEY = 'tasks';
 
 export type Task = {
   id: string;
@@ -25,7 +29,18 @@ type Props = {
 }
 
 export function TasksProvider({ children }: Props) {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(() => {
+    const data = LocalStorage.getItem<Task[]>(TASKS_KEY);
+
+    return data || [];
+  });
+
+  useEffect(() => {
+    LocalStorage.setItem({
+      key: TASKS_KEY,
+      payload: tasks,
+    });
+  }, [tasks]);
 
   const addTask = useCallback(({ content }: AddTasksInput) => {
     setTasks(state => [

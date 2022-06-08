@@ -3,6 +3,9 @@
   --app-subtle-background: hsl(210, 16.7%, 97.6%);
 
   --element-background-color: hsl(209, 13.3%, 95.3%);
+  --element-hover-background-color: hsl(209, 12.2%, 93.2%);
+
+  --element-border-color: hsl(208, 11.3%, 88.9%);
 
   --element-outline-color: hsl(207, 11.1%, 85.9%);
 
@@ -25,6 +28,9 @@
     --app-subtle-background: hsl(195, 7.1%, 11.0%);
 
     --element-background-color: hsl(197, 6.8%, 13.6%);
+    --element-hover-background-color: hsl(198, 6.6%, 15.8%);
+
+    --element-border-color: hsl(201, 6.2%, 20.5%);
 
     --element-outline-color: hsl(203, 6.0%, 24.3%);
 

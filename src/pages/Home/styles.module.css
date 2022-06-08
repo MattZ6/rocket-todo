@@ -1,6 +1,8 @@
 .mainContent {
   display: flex;
   flex-direction: column;
+  gap: 4rem;
 
   margin-top: -1.6875rem;
+  padding-bottom: 4rem;
 }

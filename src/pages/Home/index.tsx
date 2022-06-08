@@ -1,22 +1,16 @@
-import { useCallback } from 'react';
-
-import { Form, Header } from '../../components';
+import { Form, Header, Tasks } from '../../components';
 
 import styles from './styles.module.css';
 
 export function HomePage() {
-  const addToDo = useCallback((content: string) => {
-
-  }, []);
-
   return (
     <>
       <Header />
 
       <main className={styles.mainContent}>
-        <Form onSubmit={addToDo} />
+        <Form />
 
-
+        <Tasks />
       </main>
     </>
   )

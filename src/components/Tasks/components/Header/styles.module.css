@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container > div > strong {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.container > div > small {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  color: var(--text-lo-contrast);
+  background-color: var(--element-background-color);
+}
+
+
+.countLabel {
+  color: var(--brand-color);
+}
+
+.doneLabel {
+  color: var(--accent-color);
+}

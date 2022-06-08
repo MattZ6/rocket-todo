@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  gap: 1rem;
+
+  padding: 0.5rem;
+  border-radius: 8px;
+  /* border: 1px solid var(--element-border-color); */
+
+  background-color: var(--element-background-color);
+
+  list-style: none;
+}
+
+.container > p {
+  flex: 1;
+
+  font-size: 0.875;
+  line-height: 1.4;
+  color: var(--text-hi-contrast);
+  font-weight: 400;
+
+  margin: 0.5rem 0;
+
+  transition: color 100ms ease-out;
+}
+
+.container > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  outline: 2px solid transparent;
+
+  transition: background-color 150ms ease-out, outline-color 150ms ease-out;
+}
+
+.container > button:hover,
+.container > button:focus {
+  background-color: var(--element-hover-background-color);
+}
+
+.container > button:focus-visible {
+  outline-color: var(--element-outline-color);
+}
+
+.checkButton > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+
+  border: 3px solid var(--brand-color);
+
+  transition: background-color 100ms ease-out, border-color 100ms ease-out;
+}
+
+.checkButton > div > svg {
+  color: #ffffff;
+  /* color: var(--text-hi-contrast); */
+  transform: scale(0);
+
+  transition: transform 100ms ease-out;
+}
+
+.removeButton {
+  color: var(--text-lo-contrast);
+}
+
+.checked > p {
+  color: var(--text-lo-contrast);
+  text-decoration: line-through;
+}
+
+.checked > .checkButton > div {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.checked > .checkButton > div > svg {
+  transform: scale(1);
+}
