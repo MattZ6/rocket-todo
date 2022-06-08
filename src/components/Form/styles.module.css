@@ -21,7 +21,11 @@
   border-radius: 8px;
 
   font-weight: 400;
-  color: #ffffff;
+  color: var(--text-hi-contrast);
+
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
 
   outline: 2px solid transparent;
 
@@ -46,7 +50,7 @@
   border: 0;
 
   white-space: nowrap;
-  color: var(--brand-hi-contrast);
+  color: #ffffff;
 
   user-select: none;
 
