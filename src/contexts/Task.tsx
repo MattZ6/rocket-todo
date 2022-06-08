@@ -30,7 +30,7 @@ export function TasksProvider({ children }: Props) {
   const addTask = useCallback(({ content }: AddTasksInput) => {
     setTasks(state => [
       {
-        id: String(state.length + 1),
+        id: String(Date.now()),
         content,
         created_at: new Date()
       },
