@@ -6,8 +6,8 @@ import './styles/global.css';
 
 export default function App() {
   return (
-  <Provider>
-    <HomePage />
-  </Provider>
-  )
+    <Provider>
+      <HomePage />
+    </Provider>
+  );
 };

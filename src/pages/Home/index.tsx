@@ -1,10 +1,10 @@
-import { Form, Header, Tasks } from '../../components';
+import { Footer, Form, Header, Tasks } from '../../components';
 
 import styles from './styles.module.css';
 
 export function HomePage() {
   return (
-    <>
+    <div className={styles.container}>
       <Header />
 
       <main className={styles.mainContent}>
@@ -12,6 +12,8 @@ export function HomePage() {
 
         <Tasks />
       </main>
-    </>
+
+      <Footer />
+    </ div>
   )
 };

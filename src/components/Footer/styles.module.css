@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1rem;
+}
+
+.container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
+  border: 0;
+  background-color: transparent;
+
+  color: var(--text-lo-contrast);
+
+  cursor: pointer;
+
+  outline: 2px solid transparent;
+
+  transition: background-color 150ms ease-out, outline-color 150ms ease-out;
+}
+
+.container > a:hover,
+.container > a:focus {
+  background-color: var(--element-hover-background-color);
+}
+
+.container > a:focus-visible {
+  outline-color: var(--element-outline-color);
+}
+
+.container > span {
+  color: var(--text-lo-contrast);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.container > span > a {
+  color: var(--text-hi-contrast);
+  font-weight: 400;
+  text-underline-offset: 2px;
+  padding: 4px;
+  border-radius: 4px;
+
+  outline: 2px solid transparent;
+
+  transition: background-color 150ms ease-out, outline-color 150ms ease-out;
+}
+
+.container > span > a:hover,
+.container > span > a:focus {
+  background-color: var(--element-hover-background-color);
+}
+
+.container > span > a:focus-visible {
+  outline-color: var(--element-outline-color);
+}
