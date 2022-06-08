@@ -4,6 +4,7 @@
   align-items: center;
 
   color: var(--text-lo-contrast);
+  text-align: center;
 
   padding: 1rem;
 }
