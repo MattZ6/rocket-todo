@@ -6,6 +6,8 @@
   </h1>
 
   > The simplest way to manage your tasks.
+
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/ae0ccfdc-c64f-444e-848a-a9fb25d39e72/deploy-status)](https://app.netlify.com/sites/rocket-todo/deploys)
 </div>
 
 <div align="center">
