@@ -1,19 +1,22 @@
-import { Check, Trash } from 'phosphor-react';
+import { Check, Trash } from 'phosphor-react'
 
-import { Task } from '../../../../contexts/Tasks';
-import { useTasks } from '../../../../hooks';
-
-import styles from './styles.module.css';
+import { Task } from '../../../../contexts/Tasks'
+import { useTasks } from '../../../../hooks'
+import styles from './styles.module.css'
 
 type Props = {
-  task: Task;
+  task: Task
 }
 
 export function TasksListItem({ task }: Props) {
-  const { toggleTask, deleteTask } = useTasks();
+  const { toggleTask, deleteTask } = useTasks()
 
   return (
-    <li className={`${styles.container} ${task.completed_at ? styles.checked : '' }`}>
+    <li
+      className={`${styles.container} ${
+        task.completed_at ? styles.checked : ''
+      }`}
+    >
       <button
         title={task.completed_at ? 'Uncheck task' : 'Check task'}
         onClick={() => toggleTask(task.id)}
@@ -24,7 +27,7 @@ export function TasksListItem({ task }: Props) {
         </div>
       </button>
 
-      <p>{ task.content }</p>
+      <p>{task.content}</p>
 
       <button
         title="Delete task"
@@ -35,5 +38,5 @@ export function TasksListItem({ task }: Props) {
         <Trash size={20} />
       </button>
     </li>
-  );
+  )
 }

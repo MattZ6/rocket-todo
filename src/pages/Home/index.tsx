@@ -1,6 +1,5 @@
-import { Footer, Form, Header, Tasks } from '../../components';
-
-import styles from './styles.module.css';
+import { Footer, Form, Header, Tasks } from '../../components'
+import styles from './styles.module.css'
 
 export function HomePage() {
   return (
@@ -14,6 +13,6 @@ export function HomePage() {
       </main>
 
       <Footer />
-    </ div>
+    </div>
   )
-};
+}
