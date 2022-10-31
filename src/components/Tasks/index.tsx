@@ -1,6 +1,5 @@
-import { TasksHeader, TasksList } from './components';
-
-import styles from './styles.module.css';
+import { TasksHeader, TasksList } from './components'
+import styles from './styles.module.css'
 
 export function Tasks() {
   return (
@@ -9,5 +8,5 @@ export function Tasks() {
 
       <TasksList />
     </div>
-  );
+  )
 }

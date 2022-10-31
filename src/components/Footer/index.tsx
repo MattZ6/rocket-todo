@@ -1,4 +1,4 @@
-import { GithubLogo } from 'phosphor-react';
+import { GithubLogo } from 'phosphor-react'
 
 import styles from './styles.module.css'
 
@@ -14,7 +14,17 @@ export function Footer() {
         <GithubLogo size={20} />
       </a>
 
-      <span>Made by <a href="https://github.com/MattZ6" target="_blank" rel="noreferrer nofoloow noopener" title="Go to Mat's Github page">Matheus</a></span>
+      <span>
+        Made by{' '}
+        <a
+          href="https://github.com/MattZ6"
+          target="_blank"
+          rel="noreferrer nofoloow noopener"
+          title="Go to Mat's Github page"
+        >
+          Matheus
+        </a>
+      </span>
     </footer>
-  );
+  )
 }

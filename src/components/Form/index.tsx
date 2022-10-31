@@ -1,8 +1,8 @@
-import { ChangeEvent, FormEvent, useCallback, useMemo, useState } from 'react';
-import { PlusCircle } from 'phosphor-react';
+import { PlusCircle } from 'phosphor-react'
+import { ChangeEvent, FormEvent, useCallback, useMemo, useState } from 'react'
 
-import styles from './styles.module.css';
-import { useTasks } from '../../hooks';
+import { useTasks } from '../../hooks'
+import styles from './styles.module.css'
 
 const PLACEHOLDER_OPTIONS = [
   '🎸 Listen to "Rock of Ages" by Def Leppard',
@@ -21,30 +21,45 @@ const PLACEHOLDER_OPTIONS = [
   'Check that the coffee jug is empty...',
   'Going out for a run... 🏃‍♀️',
   'Watch Bojack Horseman on Netflix... 📺',
-  'Host the project on Netlify...'
-];
+  'Host the project on Netlify...',
+]
 
 export function Form() {
-  const { addTask } = useTasks();
+  const { addTask } = useTasks()
 
-  const [content, setContent] = useState('');
-  const [inputPlaceholder, setInputPlaceholder] = useState(() => PLACEHOLDER_OPTIONS[Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)])
+  const [content, setContent] = useState('')
+  const [inputPlaceholder, setInputPlaceholder] = useState(
+    () =>
+      PLACEHOLDER_OPTIONS[
+        Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)
+      ],
+  )
 
-  const handleSubmit = useCallback((event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = useCallback(
+    (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
 
-    addTask({ content })
+      addTask({ content })
 
-    setInputPlaceholder(PLACEHOLDER_OPTIONS[Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)])
+      setInputPlaceholder(
+        PLACEHOLDER_OPTIONS[
+          Math.floor(Math.random() * PLACEHOLDER_OPTIONS.length)
+        ],
+      )
 
-    setContent('');
-  }, [content]);
+      setContent('')
+    },
+    [content, addTask],
+  )
 
-  const handleTextChanged = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    setContent(event.target.value);
-  }, []);
+  const handleTextChanged = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setContent(event.target.value)
+    },
+    [],
+  )
 
-  const isInputFilled = useMemo(() => !!content.trim().length, [content]);
+  const isInputFilled = useMemo(() => !!content.trim().length, [content])
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
@@ -60,5 +75,5 @@ export function Form() {
         <PlusCircle size={24} weight="bold" />
       </button>
     </form>
-  );
+  )
 }

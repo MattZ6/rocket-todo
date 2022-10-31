@@ -1,13 +1,12 @@
-import { Provider } from './contexts';
+import { Provider } from './contexts'
+import { HomePage } from './pages'
 
-import { HomePage } from './pages';
-
-import './styles/global.css';
+import './styles/global.css'
 
 export default function App() {
   return (
     <Provider>
       <HomePage />
     </Provider>
-  );
-};
+  )
+}
