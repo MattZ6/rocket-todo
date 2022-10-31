@@ -51,18 +51,18 @@ cd rocket-todo
 Install the project dependencies:
 
 ```bash
-yarn
+pnpm i
 ```
-> You can also run `npm i` instead.
+> You can also run `npm i` or `yarn` instead.
 
 ### Develop
 
 Start local development server:
 
 ```
-yarn dev
+pnpm dev
 ```
-> You can also run `npm run dev` instead.
+> You can also run `npm run dev` or `yarn dev` instead.
 
 ## 🤝 Contributing
 
