@@ -4,7 +4,7 @@ specifiers:
   '@rocketseat/eslint-config': 1.2.0
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
-  '@vitejs/plugin-react': 3.0.1
+  '@vitejs/plugin-react': 3.1.0
   eslint: 8.33.0
   eslint-plugin-import-helpers: 1.3.1
   phosphor-react: 1.4.1
@@ -22,7 +22,7 @@ devDependencies:
   '@rocketseat/eslint-config': 1.2.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
-  '@vitejs/plugin-react': 3.0.1_vite@4.0.4
+  '@vitejs/plugin-react': 3.1.0_vite@4.0.4
   eslint: 8.33.0
   eslint-plugin-import-helpers: 1.3.1_eslint@8.33.0
   typescript: 4.9.5
@@ -757,11 +757,11 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-react/3.0.1_vite@4.0.4:
-    resolution: {integrity: sha512-mx+QvYwIbbpOIJw+hypjnW1lAbKDHtWK5ibkF/V1/oMBu8HU/chb+SnqJDAsLq1+7rGqjktCEomMTM5KShzUKQ==}
+  /@vitejs/plugin-react/3.1.0_vite@4.0.4:
+    resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^4.0.0
+      vite: ^4.1.0-beta.0
     dependencies:
       '@babel/core': 7.20.12
       '@babel/plugin-transform-react-jsx-self': 7.18.6_@babel+core@7.20.12
