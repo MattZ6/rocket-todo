@@ -2,7 +2,7 @@
   "name": "rocket-todo",
   "description": "The simplest way to manage your tasks",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Matheus Felipe Zanin",
     "email": "matt_z6@hotmail.com",
