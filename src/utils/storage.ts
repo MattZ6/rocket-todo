@@ -1,16 +1,16 @@
 export namespace LocalStorage {
   const PREFIX = '@RocketToDo'
 
-  type SetItemInput = {
+  type SetItemInput<P = unknown> = {
     key: string
-    payload: any
+    payload: P
   }
 
-  export function setItem({ key, payload }: SetItemInput) {
+  export function setItem<P = unknown>({ key, payload }: SetItemInput<P>) {
     localStorage.setItem(`${PREFIX}:${key}`, JSON.stringify(payload))
   }
 
-  export function getItem<P = any>(key: string): P | null {
+  export function getItem<P = unknown>(key: string): P | null {
     const data = localStorage.getItem(`${PREFIX}:${key}`)
 
     if (!data) {

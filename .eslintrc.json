@@ -8,6 +8,8 @@
   },
   "rules": {
     "camelcase": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "import-helpers/order-imports": [
       "warn",
       {
